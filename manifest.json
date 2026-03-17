@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "TrustLens Credibility Assistant",
+  "version": "1.2",
+  "description": "A non-intrusive credibility assistant for social media sharing. User-initiated activation.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://trustlens-backend-321698094182.europe-west1.run.app/*",
+    "https://trustlens-docker-backend.onrender.com/*",
+    "http://127.0.0.1:5000/*",
+    "http://localhost:5000/*",
+    "http://localhost:8080/*"
+
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {},
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "logo.PNG"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
